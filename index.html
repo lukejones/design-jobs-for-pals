@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Design Jobs for Pals</title>
+    <meta name="robots" content="noindex,nofollow">
+
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="jquery.rss.min.js"></script>
+    <script>
+      jQuery(function($) {
+        $("#rss-feeds").rss(
+          [
+            "https://weworkremotely.com/categories/remote-design-jobs.rss",
+            "https://remotive.io/remote-jobs/design/feed",
+            "https://jobspresso.co/?feed=job_feed&job_types=designer&search_location=United+States&job_categories&search_keywords",
+            "https://authenticjobs.com/?feed=job_feed&job_types=full-time&search_location&job_categories=design&search_keywords",
+            "https://remoteok.io/remote-design-jobs.rss"
+          ],
+          {
+          entryTemplate: '<li><a href=\"{url}\">{title}</a></li>',
+          limit: 9999
+        })
+      })
+    </script>
+    <style>
+      body {
+        background: #f4f8f8;
+        text-align: center;
+      }
+      .wrap {
+        width: 600px;
+        max-width: 90%;
+        margin: 80px auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 18px;
+        line-height: 150%;
+      }
+      a {
+        display: block;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        margin: 0 0 10px;
+        box-shadow: 0 10px 15px -15px rgba(0,0,0,.2);
+        text-decoration: none;
+        transition: 500ms;
+      }
+      a:hover {
+        transition: 500ms;
+        box-shadow: 0 10px 15px -10px rgba(0,0,0,.2);
+        color:navy;
+      }
+      a:visited {
+        color: #777;
+      }
+      ul, li{
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      h1 {
+        margin: 0 0 1.5em;
+        font-size: 36px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Design Jobs, Motherfathers</h1>
+      </header>
+      <div id="rss-feeds"></div>
+      <div class="other-places">
+        <p>Other places to find work:</p>
+        <ul>
+          <li><a href="https://angel.co/">Angel</a></li>
+          <li><a href="https://www.designgigsforgood.org/">Design Gigs for Good</a></li>
+          <li><a href="https://www.producthunt.com/jobs?categories=Design&remote_ok=false">Product Hunt</a></li>
+          <li><a href="https://www.workingnomads.co/jobs?category=design">Working Nomads</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
